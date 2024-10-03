@@ -1,0 +1,15 @@
+modules = ["python-3.11"]
+run = "streamlit run workshop/app.py"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "streamlit run workshop/app.py"]
+
+[[ports]]
+localPort = 8501
+externalPort = 80
+
+[env]
+OPENAI_API_KEY = "ABC"
