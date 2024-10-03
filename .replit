@@ -1,11 +1,12 @@
 modules = ["python-3.11"]
-run = "streamlit run workshop/app.py"
+run = "streamlit run app.py"
+onBoot = "poetry install"
 
 [nix]
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "streamlit run workshop/app.py"]
+run = ["sh", "-c", "streamlit run app.py"]
 
 [[ports]]
 localPort = 8501
